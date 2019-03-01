@@ -1,0 +1,51 @@
+{
+  "status": 200,
+  "data": [
+    {
+      "id": 3950651,
+      "slug": "ca5b9d6f94dc",
+      "nickname": "三儿王屿",
+      "avatar_source": "http://upload.jianshu.io/users/upload_avatars/3950651/acfaa0ce-42fe-424a-b7c8-9a0136fb96ec.jpg",
+      "total_likes_count": 3011,
+      "total_wordage": 234972,
+      "is_following_user": false
+    },
+    {
+      "id": 3136195,
+      "slug": "6810a6332de9",
+      "nickname": "梅拾璎",
+      "avatar_source": "http://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg",
+      "total_likes_count": 23325,
+      "total_wordage": 266353,
+      "is_following_user": false
+    },
+    {
+      "id": 12665193,
+      "slug": "757b5f9f910b",
+      "nickname": "宇文歡",
+      "avatar_source": "http://upload.jianshu.io/users/upload_avatars/12665193/828a449f-efbb-4540-b0af-f6c314810515.jpg",
+      "total_likes_count": 2424,
+      "total_wordage": 282874,
+      "is_following_user": false
+    },
+    {
+      "id": 9234143,
+      "slug": "5ddd9dd5ced9",
+      "nickname": "十七楼的安素",
+      "avatar_source": "http://upload.jianshu.io/users/upload_avatars/9234143/0819f188-bedf-4878-bbc7-bf08c163314e",
+      "total_likes_count": 449,
+      "total_wordage": 128649,
+      "is_following_user": false
+    },
+    {
+      "id": 3678149,
+      "slug": "b52ff888fd17",
+      "nickname": "简宝玉",
+      "avatar_source": "http://upload.jianshu.io/users/upload_avatars/3678149/b8a58e70-1126-48c9-97e2-8f21a31dfa94.png",
+      "total_likes_count": 38764,
+      "total_wordage": 83463,
+      "is_following_user": false
+    }
+  ],
+  "total_count": 13648
+}
