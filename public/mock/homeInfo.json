@@ -4,31 +4,31 @@
     "menu": [
       {
         "id": 2001,
-        "itemUrl": "//github.com/Xia-Ao/jianshu/blob/master/src/static/img/bander1.png"
+        "itemUrl": "//raw.githubusercontent.com/Xia-Ao/jianshu/master/src/static/img/banner1.png"
       },
       {
         "id": 2002,
-        "itemUrl": "//github.com/Xia-Ao/jianshu/blob/master/src/static/img/banner2.png"
+        "itemUrl": "//raw.githubusercontent.com/Xia-Ao/jianshu/master/src/static/img/banner2.png"
       },
       {
         "id": 2003,
-        "itemUrl": "//github.com/Xia-Ao/jianshu/blob/master/src/static/img/banner3.png"
+        "itemUrl": "//raw.githubusercontent.com/Xia-Ao/jianshu/master/src/static/img/banner3.png"
       },
       {
         "id": 2004,
-        "itemUrl": "//github.com/Xia-Ao/jianshu/blob/master/src/static/img/banner4.png"
+        "itemUrl": "//raw.githubusercontent.com/Xia-Ao/jianshu/master/src/static/img/banner4.png"
       },
       {
         "id": 2005,
-        "itemUrl": "//github.com/Xia-Ao/jianshu/blob/master/src/static/img/banner5.png"
+        "itemUrl": "//raw.githubusercontent.com/Xia-Ao/jianshu/master/src/static/img/banner5.png"
       },
       {
         "id": 2006,
-        "itemUrl": "//github.com/Xia-Ao/jianshu/blob/master/src/static/img/banner6.png"
+        "itemUrl": "//raw.githubusercontent.com/Xia-Ao/jianshu/master/src/static/img/banner6.png"
       }
     ],
     "qrCode": {
-      "imgUrl": "//github.com/Xia-Ao/jianshu/blob/master/src/static/img/qrcode.png"
+      "imgUrl": "//raw.githubusercontent.com/Xia-Ao/jianshu/master/src/static/img/qrcode.png"
     }
   }
 }

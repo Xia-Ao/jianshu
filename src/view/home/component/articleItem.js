@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
+import {Link} from "react-router-dom";
 import {
   ArticleWrapper,
   ArticleTitle,
@@ -7,7 +8,7 @@ import {
 
 } from './style'
 
-class ArticleItem extends Component {
+class ArticleItem extends PureComponent {
 
   render () {
     let item = this.props.content;
@@ -17,14 +18,15 @@ class ArticleItem extends Component {
              src={item.imgUrl}
              alt=""/>
         <div>
-          <ArticleTitle>{item.title}</ArticleTitle>
+          <Link to='detail'><ArticleTitle>{item.title}</ArticleTitle></Link>
           <Summary>{item.summary}</Summary>
           <OpList>
             <span className='zuanshi'><i className="iconfont icon-zuanshi"></i>{item.score}</span>
-            <a>{item.author}</a>
-            <a><i className="iconfont icon-xiaoxi"></i>{item.comment}</a>
-            <a><i className="iconfont icon-xin-copy"></i>{item.like}</a>
-            <a className={item.reward > 0 ? '' : 'hidden'}><i className="iconfont icon-shang"></i>{item.reward}</a>
+            <a href='javascript:;'>{item.author}</a>
+            <a href='javascript:;'><i className="iconfont icon-xiaoxi"></i>{item.comment}</a>
+            <a href='javascript:;'><i className="iconfont icon-xin-copy"></i>{item.like}</a>
+            <a href='javascript:;' className={item.reward > 0 ? '' : 'hidden'}><i
+              className="iconfont icon-shang"></i>{item.reward}</a>
           </OpList>
         </div>
       </ArticleWrapper>

@@ -1,5 +1,9 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import {connect} from 'react-redux';
+import {CSSTransition} from 'react-transition-group';
+import {actionCreator} from "./store";
+import {Link} from "react-router-dom";
+
 import {
   HeaderContainer,
   HeaderWrapper,
@@ -9,17 +13,15 @@ import {
   SearchInfo, SearchInfoTitle, SearchInfoSwitch, SearchInfoList, SearchInfoItem,
   Addition, Button
 } from './style'
-import {CSSTransition} from 'react-transition-group';
-import {actionCreator} from "./store";
 
 
-class Header extends Component {
+class Header extends PureComponent {
   render () {
     const {focused, list, mouseIn, handlerInputFocus, handlerInputBlur} = this.props;
     return (
       <HeaderContainer>
         <HeaderWrapper>
-          <Logo></Logo>
+          <Link to='/'><Logo></Logo></Link>
           <Nav>
             <NavItem className='left active'>首页</NavItem>
             <NavItem className='left'>下载</NavItem>

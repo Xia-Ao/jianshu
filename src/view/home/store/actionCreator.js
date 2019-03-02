@@ -24,6 +24,13 @@ const authorList = (data) => {
   }
 };
 
+const findMoreAuthor = (data) => {
+  return {
+    type: CONSTANT.FIND_MORE,
+    data: fromJS(data)
+  }
+};
+
 export const homeInfoInit = () => {
   return (dispatch) => {
     axios.get('/mock/homeInfo.json')
@@ -66,6 +73,29 @@ export const authorReward = () => {
       }).catch((err) => {
       console.log(err);
     })
+  }
+};
+
+export const findMore = () => {
+  return (dispatch) => {
+    axios.get('/mock/moreAuthor.json')
+      .then((res) => {
+        console.log(res);
+        if (res.data.status === 200) {
+          dispatch(findMoreAuthor(res.data.data));
+        } else {
+          console.log('返回数据错误')
+        }
+      }).catch((err) => {
+      console.log(err);
+    })
+  }
+};
+
+export const topShow = (flag) => {
+  return {
+    type: CONSTANT.TOP_SHOW,
+    flag
   }
 };
 

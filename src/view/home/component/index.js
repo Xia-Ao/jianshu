@@ -1,20 +1,23 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import {actionCreator} from '../store';
 import ArticleItem from './articleItem';
 import Menu from './menu';
+import Author from './author';
 
 import {
   HomeContainer,
   LeftWrapper,
   RightWrapper,
+  ToTop,
 } from './style';
 import connect from "react-redux/es/connect/connect";
 
 
-class Home extends Component {
+class Home extends PureComponent {
 
   render () {
-    const {menuList, articleSum, authorList, qrCodeImg} = this.props;
+    const {menuList, articleSum, authorList, qrCodeImg, topShow} = this.props;
+    console.log(topShow)
     return (
       <HomeContainer>
         <LeftWrapper>
@@ -28,14 +31,34 @@ class Home extends Component {
         </LeftWrapper>
         <RightWrapper>
           <Menu content={menuList}></Menu>
-          <img src={qrCodeImg} alt=""/>
+          {/*右侧app下载提示*/}
+          <a className="download">
+            <img className='qr-img' src={qrCodeImg} alt=""/>
+            <div className="qr-info">
+              <div className='info1'>下载简书手机APP</div>
+              <div className='info2'>随时随地发现内容</div>
+            </div>
+          </a>
+          <Author content={authorList}>
+          </Author>
         </RightWrapper>
+        {topShow ? <ToTop onClick={this.goToTop}> <i className="iconfont icon-arraw_top"></i></ToTop> : ''}
+        {/*<ToTop> <i className="iconfont icon-arraw_top"></i></ToTop>*/}
       </HomeContainer>
     )
   }
 
   componentDidMount () {
     this.props.homeInfoInit();
+    window.addEventListener('scroll', this.props.scrollEvent)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.props.scrollEvent)
+  }
+
+  goToTop = () => {
+    window.scrollTo(0, 0);
   }
 
 }
@@ -46,6 +69,7 @@ const mapStateToProps = (state) => {
     articleSum: state.getIn(['home', 'articleSum']).toJS(),
     authorList: state.getIn(['home', 'authorList']).toJS(),
     qrCodeImg: state.getIn(['home', 'qrCodeImg']),
+    topShow: state.getIn(['home', 'topShow'])
   }
 };
 
@@ -56,6 +80,14 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actionCreator.articleSumInit());
       dispatch(actionCreator.authorReward());
     },
+    scrollEvent () {
+      if (document.documentElement.scrollTop > 200) {
+        dispatch(actionCreator.topShow(true))
+      } else {
+        dispatch(actionCreator.topShow(false))
+      }
+
+    }
   }
 };
 
